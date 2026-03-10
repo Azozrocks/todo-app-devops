@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: todo-app
+spec:
+  replicas: 2 # Run 2 copies of the container simultaneously
+  selector:
+    matchLabels:
+      app: todo-app
+  template:
+    metadata:
+      labels:
+        app: todo-app
+    spec:
+      containers:
+        - name: todo-app
+          image: azozrocks/todo-app:v1 # Pull this image from Docker Hub
+          ports:
+            - containerPort: 5000 # The app runs on port 5000 inside the container
+          resources:
+            requests:
+              memory: "64Mi" # minimum memory Kubernetes reserves for the container
+              cpu: "100m" # minimum CPU (100 millicore = 0.1 of one CPU core)
+            limits:
+              memory: "128Mi" # maximum memory the container can use
+              cpu: "200m" # maximum CPU the container can use
