@@ -22,6 +22,9 @@ kubectl apply -f k8s/deployment.yaml
 kubectl apply -f k8s/service.yaml
 minikube service todo-app-service --url
 
+## Docker Image
+docker pull azozrocks/todo-app:v1
+
 ## API Endpoints
 | Method | Endpoint  | Description       |
 |--------|-----------|-------------------|
