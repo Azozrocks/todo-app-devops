@@ -9,4 +9,4 @@ spec:
     - protocol: TCP
       port: 80 # Outside world accesses it on port 80
       targetPort: 5000 # Forwards traffic to port 5000 in the container
-  type: LoadBalancer # Exposes the app to the outside world
+  type: LoadBalancer # Exposes the app to the outside world (AWS, Google Cloud, or Azure)
