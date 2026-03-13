@@ -3,6 +3,10 @@ from flask import Flask, jsonify, request
 app = Flask(__name__)
 todos = []
 
+def reset_todos():
+    global todos
+    todos = []
+
 @app.route("/health")
 def health():
     return jsonify({"status": "ok"})

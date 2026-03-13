@@ -1,8 +1,9 @@
 import pytest
-from app import app
+from app import app, reset_todos
 
 @pytest.fixture
 def client():
+    reset_todos()            # reset todos before each test
     app.config["TESTING"] = True
     with app.test_client() as client:
         yield client
@@ -24,6 +25,4 @@ def test_add_todo(client):
     assert response.status_code == 201
     assert response.get_json()["task"] == "Learn Github Actions"
 
-@app.route("/")
-def home():
-    return jsonify({"message": "Welcome to Todo App!", "version": "2.0"})
+    
