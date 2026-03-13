@@ -23,3 +23,7 @@ def test_add_todo(client):
     )
     assert response.status_code == 201
     assert response.get_json()["task"] == "Learn Github Actions"
+
+@app.route("/")
+def home():
+    return jsonify({"message": "Welcome to Todo App!", "version": "2.0"})

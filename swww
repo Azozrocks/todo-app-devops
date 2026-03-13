@@ -1,0 +1,38 @@
+[33mcommit 81a535cecb98a419b167e8d0c4d30a00c74abe6c[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m)[m
+Merge: dd3ac13 887f279
+Author: Abdulaziz <zezharthi@gmail.com>
+Date:   Thu Mar 12 20:56:43 2026 +0300
+
+    Merge and resolve conflicts
+
+[33mcommit dd3ac13d1f98fb2943a4b6a5a3fe1ef2852372e5[m
+Author: Abdulaziz <zezharthi@gmail.com>
+Date:   Thu Mar 12 20:51:47 2026 +0300
+
+    Add CI/CD pipeline with GitHub Actions
+
+[33mcommit 887f2794e0efee6f3917101f734e3f676550a402[m
+Author: Azozrocks <145076235+Azozrocks@users.noreply.github.com>
+Date:   Tue Mar 10 07:38:36 2026 +0300
+
+    Delete important.txt
+
+[33mcommit c60e01f5def7973156f03a980b1f4d7cb4ba8695[m
+Author: Azozrocks <145076235+Azozrocks@users.noreply.github.com>
+Date:   Tue Mar 10 05:43:16 2026 +0300
+
+    Add Docker image section to README
+    
+    Added Docker image instructions to README.
+
+[33mcommit ca49e9c07155b57831d9834ed592e64762309b42[m
+Author: Abdulaziz <zezharthi@gmail.com>
+Date:   Tue Mar 10 05:40:51 2026 +0300
+
+    My first DevOps project - Flask + Docker + Kubernetes
+
+[33mcommit 43ae1cfd3c46241308ce3aa7fcaa1747f3851237[m
+Author: Abdulaziz <zezharthi@gmail.com>
+Date:   Mon Mar 9 20:20:39 2026 +0300
+
+    initial commit
