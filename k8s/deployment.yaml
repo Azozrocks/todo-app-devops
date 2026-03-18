@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: todo-app
-          image: azozrocks/todo-app:a7e94afb9eac51242458dcb9c3db8ba824f6c35d
+          image: azozrocks/todo-app:53bd72df07fe5add9085613524e1bb88c92dd711
           ports:
             - containerPort: 5000 # The app runs on port 5000 inside the container
           resources:
