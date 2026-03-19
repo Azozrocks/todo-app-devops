@@ -5,6 +5,12 @@ from flask import Flask, jsonify, request
 
 app = Flask(__name__)
 
+with app.app_context():
+    try:
+        init_db()
+    except Exception:
+        pass
+
 
 def get_db():
     return psycopg2.connect(
@@ -134,9 +140,6 @@ def delete_todo(todo_id):
     return jsonify({"message": f"Todo {todo_id} deleted"}), 200
 
 
-with app.app_context():
-    init_db()
-
-
 if __name__ == "__main__":
+    init_db()
     app.run(host="0.0.0.0", port=5000)
