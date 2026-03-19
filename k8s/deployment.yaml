@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: todo-app
 spec:
-  replicas: 2 # Run 2 copies of the container simultaneously
+  replicas: 2
   selector:
     matchLabels:
       app: todo-app
@@ -16,11 +16,31 @@ spec:
         - name: todo-app
           image: azozrocks/todo-app:53bd72df07fe5add9085613524e1bb88c92dd711
           ports:
-            - containerPort: 5000 # The app runs on port 5000 inside the container
+            - containerPort: 5000
+          env:
+            - name: DB_HOST
+              value: postgres-service
+            - name: DB_PORT
+              value: "5432"
+            - name: DB_NAME
+              valueFrom:
+                secretKeyRef:
+                  name: postgres-secret
+                  key: POSTGRES_DB
+            - name: DB_USER
+              valueFrom:
+                secretKeyRef:
+                  name: postgres-secret
+                  key: POSTGRES_USER
+            - name: DB_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: postgres-secret
+                  key: POSTGRES_PASSWORD
           resources:
             requests:
-              memory: "64Mi" # minimum memory Kubernetes reserves for the container
-              cpu: "100m" # minimum CPU (100 millicore = 0.1 of one CPU core)
+              memory: "64Mi"
+              cpu: "100m"
             limits:
-              memory: "128Mi" # maximum memory the container can use
-              cpu: "200m" # maximum CPU the container can use
+              memory: "128Mi"
+              cpu: "200m"
