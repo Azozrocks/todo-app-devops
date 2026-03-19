@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: todo-app
-          image: azozrocks/todo-app:v1 # Pull this image from Docker Hub
+          image: azozrocks/todo-app:53bd72df07fe5add9085613524e1bb88c92dd711
           ports:
             - containerPort: 5000 # The app runs on port 5000 inside the container
           resources:
