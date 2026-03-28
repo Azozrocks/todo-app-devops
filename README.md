@@ -34,6 +34,17 @@ Every push to `main` automatically:
 | PUT | /todos/\<id\> | Update a todo |
 | DELETE | /todos/\<id\> | Delete a todo |
 
+## Monitoring
+
+Uptime Kuma monitors the app's endpoints every 60 seconds and tracks uptime history.
+
+| Monitor | URL |
+|---------|-----|
+| Health Check | `http://129.212.193.236/health` |
+| Todos API | `http://129.212.193.236/todos` |
+
+Uptime Kuma dashboard: `http://64.225.93.70`
+
 ## How to Run Locally
 
 ### 1. Run with Python
