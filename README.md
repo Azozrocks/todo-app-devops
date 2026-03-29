@@ -45,6 +45,17 @@ Uptime Kuma monitors the app's endpoints every 60 seconds and tracks uptime hist
 
 Uptime Kuma dashboard: `http://64.225.93.70`
 
+## Observability
+
+| Tool | Purpose |
+|------|---------|
+| Uptime Kuma | External uptime monitoring, endpoint availability |
+| Prometheus | Internal metrics collection from cluster and pods |
+| Grafana | Metrics visualization and dashboards |
+
+Prometheus and Grafana are deployed via Helm using the `kube-prometheus-stack` chart into the `monitoring` namespace.
+
+
 ## How to Run Locally
 
 ### 1. Run with Python
